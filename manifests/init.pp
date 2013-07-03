@@ -156,7 +156,7 @@ class redis (
     cwd     => $redis_src_dir,
     path    => '/bin:/usr/bin',
     unless  => "test $(${redis_bin_dir}/bin/redis-server --version | cut -d ' ' -f 1) = 'Redis'",
-    require => [ Exec['unpack-redis'], Class['gcc'] ],
+    require => [ Exec['unpack-redis']],
   }
 
 }
