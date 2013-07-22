@@ -19,7 +19,7 @@ class redis::params {
   $version = '2.6.14'
   $redis_src_dir = '/opt/redis-src'
   $redis_bin_dir = '/opt/redis'
-  $redis_max_memory = '4gb'
+  $redis_max_memory = '1gb'
   $redis_max_clients = false
   $redis_timeout = 300         # 0 = disabled
   $redis_loglevel = 'notice'
@@ -27,5 +27,6 @@ class redis::params {
   $redis_slowlog_log_slower_than = 10000 # microseconds
   $redis_slowlog_max_len = 1024
   $redis_password = false
+  $redis_max_memory_policy = 'volatile-lru'
 
 }
