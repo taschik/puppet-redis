@@ -89,6 +89,8 @@ class redis (
   $redis_slowlog_log_slower_than = $redis::params::redis_slowlog_log_slower_than,
   $redis_slowlog_max_len = $redis::params::redis_slowlog_max_len,
   $redis_password = $redis::params::redis_password
+  $redis_max_memory_policy = $redis::params::redis_max_memory_policy
+  
 ) inherits redis::params {
 
   $redis_pkg_name = "redis-${version}.tar.gz"
